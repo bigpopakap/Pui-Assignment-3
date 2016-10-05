@@ -55,13 +55,15 @@
         
         <!--Add items bar-->
         <div class="add-items-bar container-fluid">
-            <div class="col-xs-9">
-                <input class="form-control input-sm" id="text-input" type="text"/>
-            </div>
-            <!--Add button-->
-            <div class="col-xs-3">
-                <button type="button" class="btn btn-primary btn-xs" onclick="addItem()">Add</button>
-            </div>
+            <form onsubmit="addItem(); return false;">
+                <div class="col-xs-9">
+                    <input class="form-control input-sm" id="text-input" type="text"/>
+                </div>
+                <!--Add button-->
+                <div class="col-xs-3">
+                    <button type="submit" class="btn btn-primary btn-xs">Add</button>
+                </div>
+            </form>
         </div>
         
         <!--Not completed items-->
