@@ -6,20 +6,27 @@ var ITEM_TEMPLATE =
         <button class="delete-button" onclick="deleteItem(this)">Delete</button> \
         <span class="item-text"></span></a>';
 
-//addItem function
 function addItem() {
-    var $list = $('#notCompletedItems');
     var userInput = $('#text-input').val();
-
-    var $newItem = $(ITEM_TEMPLATE);
-
-    $newItem.find('.item-text').text(userInput);
-    $list.append($newItem);
+    addItemUI(userInput);
     $('#text-input').val('');
+
+    itemStore.addItem(userInput);
 };
 
+function addItemUI(itemText) {
+    var $list = $('#notCompletedItems');
+
+    var $newItem = $(ITEM_TEMPLATE);
+    $newItem.find('.item-text').text(itemText);
+
+    $list.append($newItem);
+}
+
 function deleteItem(element) {
-    $(element).parent().remove();
+    var $item = $(element).parent();
+    itemStore.deleteItem($item.find('.item-text').text());
+    $item.remove();
 }
 
 function completeItem(checked) {
@@ -28,3 +35,8 @@ function completeItem(checked) {
     $doneList.$append(doneItem);
 }
 
+$(document).ready(function() {
+    itemStore.getItems().forEach(function(itemText) {
+        addItemUI(itemText);
+    });
+});
