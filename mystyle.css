@@ -32,26 +32,24 @@ nav {
 }
 
 /*List Members Bar style*/
-#listMembersBar {
+.list-members-bar,
+.add-items-bar {
     margin-bottom: 20px;
     margin-left: 20px;
 }
 
 /*Add Item Bar style*/
-    /*Text input*/
-    #text-input {
-        float: left;
-    }
+/*Text input*/
 
-    /*Add Button style*/
-    #add-button {
-        background-color: skyblue; 
-        color: white;
-        padding: 5px 15px;
-        border-radius: 4px;
-        font-family: "Verdana";
-        font-size: 14px;
-    }
+/*Add Button style*/
+.btn-primary {
+    background-color: skyblue;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 4px;
+    font-family: "Verdana";
+    font-size: 14px;
+}
 
 /*List Group style*/
 div.list-group {
@@ -71,23 +69,23 @@ a.list-group-item {
     vertical-align: middle;
 }
 
-    /*Delete Button style*/
-    .delete-button {
-        margin: 0 10px 0 10px;
-        padding: 2px 5px;
-        float: right;
-        background-color: white;
-        color: dimgray;
-        border: 2px solid gray;
-        border-radius: 4px;
-        font-family: "Verdana";
-        font-size: 14px;
-    }
+/*Delete Button style*/
+.delete-button {
+    margin: 0 10px 0 10px;
+    padding: 2px 5px;
+    float: right;
+    background-color: white;
+    color: dimgray;
+    border: 2px solid gray;
+    border-radius: 4px;
+    font-family: "Verdana";
+    font-size: 14px;
+}
 
-    .delete-button:hover {
-        background-color: red;
-        border: 2px solid red;
-        color: white;
-        -webkit-transition-duration: 0.6s;
-        transition-duration: 0.6s;
-    }
+.delete-button:hover {
+    background-color: red;
+    border: 2px solid red;
+    color: white;
+    -webkit-transition-duration: 0.6s;
+    transition-duration: 0.6s;
+}
